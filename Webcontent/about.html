@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: aquamarine;
+            
+            
+        }
+       
+    </style>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="about.html">About Us</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="pizza.html">Home</a></li>
+      <li><a href="innermenu.html">Menu</a></li>
+      <li><a href="specialoffer.html">Whats new</a></li>
+      <li><a href="toppings.html">Toppings</a></li>
+    </ul>
+  </div>
+</nav>
+  
+    <div class="container">
+  <div class="normal">
+    <h1>Pizza Parlour</h1>      
+    <p>Leading Pizza Maker in the world</p>
+  </div>
+    
+</div>
+<div class="container-fluid">
+  <h1>About US</h1>
+  <p>Our Pizzas are across 15,000 restaurents in the world.</p>
+
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">Contact us :<mark>5345-231</mark> </div>
+    <div class="col-sm-8" style="background-color:lavenderblush;">.For queries: <mark>Email to pizza@gmail.com</mark></div>
+  </div>
+</div>
+    
+    <div class="container">
+  <h2>Feedback</h2>
+  
+  <input class="form-control" id="myInput" type="text" placeholder="Feedback..">
+  <div id="myDIV">
+   <br>
+      
+    <button class="btn" onclick="thanks.html">Submit</button>
+    <button class="btn btn-info">Reset</button>
+   
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDIV *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+    <div class="container">
+  <h2> Site Developers</h2>
+           
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Abhinav</td>
+        <td>Bansal</td>
+        <td>abhi@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Shreyash</td>
+        <td>Bukkawar</td>
+        <td>shreyash@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Jagruti</td>
+        <td>Bachhav</td>
+        <td>jagruti@gmail.com</td>
+      </tr>
+        <tr>
+        <td>Sahil</td>
+        <td>Deshpande</td>
+        <td>Sahil@gmail.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="col-md-3 text-center small-screen-default" style="background: rgba(0, 0, 0, 0.1);margin: 10px;">
+<div class="divider-wrapper">&nbsp;</div>
+<img style="width: 40px; height: 40px;" alt="" src="instagram.png" />
+<p class="lead text-center center text-light element-top-20 element-bottom-20" data-delay="0.3s"><a href="#">Visit our page<br />on Instagram</a></p>
+<div class="divider-wrapper">&nbsp;</div>
+</div>
+    
+    <div class="col-md-3 text-center small-screen-default" style="background: rgba(0, 0, 0, 0.1);margin: 10px;">
+<div class="divider-wrapper">&nbsp;</div>
+<img style="width: 40px; height: 40px;" alt="" src="fb.png" />
+<p class="lead text-center center text-light element-top-20 element-bottom-20" data-delay="0.3s"><a href="#">Visit our page<br />on Facebook</a></p>
+<div class="divider-wrapper">&nbsp;</div>
+</div>
+
+    
+</body>
+</html>

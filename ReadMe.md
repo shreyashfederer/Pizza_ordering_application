@@ -1,0 +1,1 @@
+Developed a online pizza ordering application using PHP, AJAX ,HTML , CSS and Javascript. Used MySQL as the database . 

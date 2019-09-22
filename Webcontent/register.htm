@@ -1,0 +1,92 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>Sign up to PIZZA</title>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">
+  		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script>
+  			$( function() {
+    			$( "#datepicker" ).datepicker();
+  			} );
+  		</script>
+	</head>
+	<body style="background-color:mistyrose">
+		<style>
+			.form_row{
+				list-style:none;
+				font-size: : 20px;
+                
+			}
+			img {
+    			display: block;
+    			margin: auto;
+    			width: 40%;
+			}
+			.center {
+    			margin: auto;
+    			width: 50%;
+				padding:10px;
+			}
+            .list_col{
+                font-size: 20px;
+                width:100%;
+                margin:20px;
+            }
+		</style>
+		<div class="center">
+			<label class="center" style="font-size:50px;font-style:normal">WELCOME TO PIZZA</label>
+		</div>
+		<div class="center">
+			<label class="center" style="font-size:20px;font-style:italic">Sign Up for exciting deals</label>
+		</div>
+		<form class="center" action="pizza.html" method="post">
+            <fieldset style="background-color:antiquewhite">
+                <legend>Sign Up Page:</legend>
+                <ul  class="form_row">
+                    <li class="list_col">
+                        <input type="email" name="email" placeholder="Email Id" required="fill in details">
+
+                        
+                    </li>
+                    <li class="list_col">
+                        <input type="text" name="firstname" placeholder="First name" required="fill in details">
+
+                       
+                    </li>
+                    <li class="list_col">
+                     <input type="text" name="lastname" placeholder="Last Name" required="fill in details">
+                    </li>
+                    <li class="list_col">
+                       <input type="tel" name="phone_number" placeholder="Mobile number" required="fill in details">
+                       
+                    </li>
+                    
+                    <li class="list_col" style="font-size:15px">
+                        <input type="text" id="datepicker" name="dob" placeholder="DOB" required="fill in details">
+                        
+                    </li>
+                    <li class="list_col">
+                        <input type="password" name="password" placeholder="Password" pattern=".{3,}" required title="minimum 3 characters">
+
+
+                    </li>
+
+                    <li class="list_col">
+                       Gender:
+<input type="radio" name="gender" value="male" checked> Male
+                        <input type="radio" name="gender" value="female"> Female
+
+                    </li>
+
+                    <li class="list_col">
+                        <input type="submit" value="Submit">
+
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+
+	</body>
+</html> 

@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>Login to Pizza</title>
+        <script>
+            var xmlDoc = "";
+            window.onload = loadXMLDoc;
+            function loadXMLDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        xmlDoc = this.responseXML;
+                    }
+                };
+                xhttp.open("GET", "users.xml", true);
+                xhttp.send();
+            }
+            function validateUser() {
+                var flag = false;
+                tu = document.getElementById("un").value;
+                tp = document.getElementById("ps").value;
+                users = xmlDoc.getElementsByTagName("user");
+
+                for (var i = 0; i < users.length; i++) {
+                    var su = users[i].getElementsByTagName("username")[0].childNodes[0].nodeValue;
+                    var sp = users[i].getElementsByTagName("password")[0].childNodes[0].nodeValue;
+                    
+                    if (su == tu && sp == tp) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag == false) {
+                    window.history.back();
+                    alert("invalid username and passeord");
+                }
+                return flag;
+            }
+        </script>
+	</head>
+	<body style="background-color:aliceblue">
+		<style>
+			.form_row{
+				list-style:none;
+
+			}
+			img {
+    			display: block;
+    			margin: auto;
+    			width: 40%;
+			}
+			.center {
+    			margin: auto;
+    			width: 50%;
+				padding:20px;
+			}
+            li{
+                margin: 10px;
+                
+            }
+		</style>
+        
+		<div class="center" id="xmltext">
+			<label id="demo"  class="center" style="font-size:30px;font-style:bold"> WELCOME TO FEDERER'S !</label>
+		</div>
+	
+		<form class="center" action="index.php" onsubmit="return validateUser()">
+			<fieldset style="background-color:antiquewhite">
+	<h2 style="color: aqua">LOGIN PAGE</h2>
+			<ul class="form_row">
+			<li style="width:100%">
+				  	<input id="un" type="text" name="username" placeholder="EmailId" required="fill in details"/>
+			</li>
+			<li>
+				  	<input id="ps" type="password" name="password" placeholder="Password" required="fill in details"/>
+	
+			</li>
+	
+			<li>
+				  	 <input type="submit" value="Submit">
+					
+			</li>
+			<li>
+				<a href="#">forgot password?</a>
+			</li>
+			<li>
+				<strong>NEW USER?</strong><a href="register.htm">Sign Up Now!</a> 
+			</li>
+			</ul>
+			</fieldset>
+		</form>
+		<br>
+        <img src="guarantee.png" height="312" width="42" alt="guarentee" >
+        
+
+	</body>
+</html> 
